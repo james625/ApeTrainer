@@ -27,19 +27,19 @@ This project will be created using canvas and vanilla js. Three.js will also
 be considered to potentially make three dimensional objects.
 
 ## Implementation Timeline
-* Friday afternoon & Weekend
+* Friday afternoon & Weekend\
     Set up canvas and implement a basic version where circles appear on the
     screen and can be clicked on. A timer and a basic scoring system will
     be added. Research three.js.
-* Monday
+* Monday\
     Create buttons for different game modes and implement the logic behind 
     each button.
-* Tuesday
+* Tuesday\
     Use CSS to brush up the interface and make sure everything is functional.
-* Wednesday
+* Wednesday\
     Try to add bonus features and brainstorm additional bonus features. 
     Potentially use three.js.
-* Thursday morning
+* Thursday morning\
     Prepare for presentation.
 
 ## Bonus Features
