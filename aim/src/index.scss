@@ -1,0 +1,23 @@
+canvas {
+    display: block;
+    margin: auto;
+    border: 5px solid yellow;
+    // background-image: url('../src/center.png');
+    // background-position: center;
+    // cursor: none;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    border: 5px solid red;
+}
+
+p {
+    display: block;
+    margin: 0;
+    border: 5px solid green;
+}
