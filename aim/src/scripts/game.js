@@ -8,6 +8,8 @@ class Game {
         this.ctx = ctx;
         this.radius = radius;
         this.color = color;
+        this.clicks = 0;
+        this.points = 0;
         this.target = new Target(this.randomPosition(), radius, color);
         this.handleClick = this.handleClick.bind(this);
         canvas.addEventListener('click', this.handleClick);
@@ -22,14 +24,22 @@ class Game {
     render() {
         this.ctx.clearRect(0, 0, this.X, this.Y);
         this.target.draw(this.ctx);
+        const points = document.querySelector(".points");
+        const accuracy = document.querySelector(".accuracy");
+        const score = document.querySelector(".score");
+        points.innerText = `Points: ${this.points}`
+        const acc = Math.floor((this.points / this.clicks) * 100)
+        accuracy.innerText = `Accuracy: ${acc}%`
+        score.innerText = `Score: ${acc * this.points}`
     }
 
     handleClick(e) {
         const box = this.canvas.getBoundingClientRect();
         const cursorX = e.clientX - box.left;
         const cursorY = e.clientY - box.top;
+        this.clicks++;
         if (this.target.clickedTarget(cursorX, cursorY)) {
-            // debugger
+            this.points ++;
             this.target = new Target(this.randomPosition(), this.radius, this.color);
             this.render();
         }
