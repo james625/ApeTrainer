@@ -9,7 +9,6 @@ class Game {
         this.radius = radius;
         this.color = color;
         this.target = new Target(this.randomPosition(), radius, color);
-        this.render();
         this.handleClick = this.handleClick.bind(this);
         canvas.addEventListener('click', this.handleClick);
     };
@@ -34,6 +33,10 @@ class Game {
             this.target = new Target(this.randomPosition(), this.radius, this.color);
             this.render();
         }
+    };
+
+    start() {
+        this.render();
     };
 };
 

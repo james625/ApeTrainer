@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // ctx.fillStyle = "#ADD8E6";
     // ctx.fillRect(0, 0, 1000, 500);
-    const game = new Game(canvas, ctx, 25, "red");
+    const game = new Game(canvas, ctx, 25, "blue");
+    const start = document.querySelector(".start");
+    start.addEventListener("click", game.start.bind(game))
     // canvas.addEventListener("mousemove", (event) => {
     //     canvas.style.backgroundPositionX = event.offsetX * 1.8 + "px";
     //     canvas.style.backgroundPositionY = event.offsetY + 80 + "px";
