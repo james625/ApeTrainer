@@ -29,10 +29,10 @@ class Game {
         const points = document.querySelector(".points");
         const accuracy = document.querySelector(".accuracy");
         const score = document.querySelector(".score");
-        points.innerText = `Points: ${this.points}`
+        points.innerText = `Raw Score: ${this.points}`
         const acc = Math.floor((this.points / this.clicks) * 100)
         accuracy.innerText = `Accuracy: ${acc}%`
-        score.innerText = `Score: ${acc * this.points}`
+        score.innerText = `Final Score: ${acc * this.points}`
     }
 
     handleClick(e) {
@@ -40,6 +40,9 @@ class Game {
         const cursorX = e.clientX - box.left;
         const cursorY = e.clientY - box.top;
         this.clicks++;
+        if (this.timer.maxTime <= 0) {
+            this.canvas.classList.add("game-over");
+        }
         if (this.target.clickedTarget(cursorX, cursorY)) {
             this.points ++;
             this.target = new Target(this.randomPosition(), this.radius, this.color);
@@ -47,11 +50,14 @@ class Game {
         }
     };
 
-    start() {
+    start(time) {
+        this.canvas.classList.remove("game-over")
+        this.target = new Target(this.randomPosition(), this.radius, this.color);
         this.render();
         this.timer.reset();
-        this.timer.start(5000);
+        this.timer.start(time);
     };
+
 };
 
 export default Game

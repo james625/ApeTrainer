@@ -4,9 +4,9 @@ ul {
 
 canvas {
     border: 5px solid yellow;
-    // background-image: url('../src/center.png');
+    // background-image: url('../src/assets/center.png');
     // background-position: bottom;
-    cursor: crosshair;
+    // cursor: crosshair;
     grid-column-start: 8;
     grid-column-end: auto;
     grid-row-start: 10;
@@ -52,15 +52,24 @@ body {
 }
 
 .timer {
-    grid-column-start: 20;
-    grid-column-end: auto;
+    grid-column-start: 19;
+    grid-column-end: 24;
     grid-row-start: 10;
     grid-row-end: auto;
 }
 
 .scoreboard {
     grid-column-start: 34;
-    grid-column-end: auto;
+    grid-column-end: 39;
     grid-row-start: 10;
     grid-row-end: auto;
+    display: block;
+}
+
+.game-over {
+    pointer-events: none;
+}
+
+li {
+    background-image: url("../src//assets/wall.jpg");
 }

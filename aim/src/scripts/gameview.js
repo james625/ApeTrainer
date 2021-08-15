@@ -13,7 +13,7 @@ class GameView {
     createGame() {
         this.game.clicks = 0;
         this.game.points = 0
-        this.game.start();
+        this.game.start(60000);
     }
 };
 
