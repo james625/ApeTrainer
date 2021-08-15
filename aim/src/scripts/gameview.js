@@ -1,13 +1,8 @@
 import Game from "./game"
-import Timer from "./timer";
 
 class GameView {
     constructor(canvas, ctx, radius, color) {
-        this.canvas = canvas;
-        this.ctx = ctx;
-        this.radius = radius;
-        this.color = color;
-        this.timer = new Timer(ctx);
+        this.game = new Game(canvas, ctx, radius, color);
     }
 
     start() {
@@ -16,10 +11,9 @@ class GameView {
     }
 
     createGame() {
-        const game = new Game(this.canvas, this.ctx, this.radius, this.color);
-        game.start();
-        this.timer.reset();
-        this.timer.start(5000);
+        this.game.clicks = 0;
+        this.game.points = 0
+        this.game.start();
     }
 };
 

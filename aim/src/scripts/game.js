@@ -1,4 +1,5 @@
 import Target from "./target";
+import Timer from "./timer";
 
 class Game {
     constructor(canvas, ctx, radius, color) {
@@ -8,6 +9,7 @@ class Game {
         this.ctx = ctx;
         this.radius = radius;
         this.color = color;
+        this.timer = new Timer(ctx);
         this.clicks = 0;
         this.points = 0;
         this.target = new Target(this.randomPosition(), radius, color);
@@ -47,6 +49,8 @@ class Game {
 
     start() {
         this.render();
+        this.timer.reset();
+        this.timer.start(5000);
     };
 };
 

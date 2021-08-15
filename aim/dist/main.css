@@ -7,6 +7,7 @@ ul {
 
 canvas {
   border: 5px solid yellow;
+  cursor: crosshair;
   grid-column-start: 8;
   grid-column-end: auto;
   grid-row-start: 10;

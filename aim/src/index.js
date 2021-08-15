@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // const start = document.querySelector(".start");
     // start.addEventListener("click", game.start.bind(game))
     // canvas.addEventListener("mousemove", (event) => {
-    //     canvas.style.backgroundPositionX = event.offsetX * 1.8 + "px";
-    //     canvas.style.backgroundPositionY = event.offsetY + 80 + "px";
+    //     canvas.style.backgroundPositionX = event.offsetX + "px";
+    //     canvas.style.backgroundPositionY = event.offsetY + "px";
     // });
 
     // canvas.addEventListener("mouseenter", () => {

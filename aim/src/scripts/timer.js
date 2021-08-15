@@ -4,6 +4,7 @@ class Timer {
         this.seconds = 0;
         this.maxTime = 0;
         this.ctx = ctx;
+        this.clock;
     };
 
     start(ms) {
@@ -12,22 +13,24 @@ class Timer {
         ms = ms - (this.minutes * 60000);
         this.seconds = Math.floor(ms / 1000);
         this.render();
-        const clock = setInterval(changeTime.bind(this), 1000);
+        this.clock = setInterval(changeTime.bind(this), 1000);
         function changeTime() {
             if (this.maxTime <= 0) {
-                clearInterval(clock);
-            }
-            this.maxTime -= 1000;
-            if (this.seconds === 0) {
-                this.seconds = 59;
-                this.minutes -= 1;
+                clearInterval(this.clock);
             } else {
-                this.seconds -= 1;
+                this.maxTime -= 1000;
+                if (this.seconds === 0) {
+                    this.seconds = 59;
+                    this.minutes -= 1;
+                } else {
+                    this.seconds -= 1;
+                }
+                this.render();
+                if (this.maxTime <= 0) {
+                    clearInterval(this.clock);
+                }
             }
-            this.render();
-            if (this.maxTime <= 0) {
-                clearInterval(clock);
-            }
+            
         };
     };
 
@@ -44,7 +47,12 @@ class Timer {
         this.minutes = 0;
         this.seconds = 0;
         this.maxTime = 0;
+        clearInterval(this.clock);
     };
+
+    isFinished() {
+        return this.maxTime <= 0;
+    }
 };
 
 export default Timer;
