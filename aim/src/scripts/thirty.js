@@ -23,18 +23,22 @@ class Thirty extends Game {
         score.innerText = `Final Score: ${this.points}`
     }
 
-    play() {
+    blinkCircle() {
         const modes = {
             "easy": 1000,
             "medium": 500,
             "hard": 250
         };
-        setInterval(() => {
+        this.render();
+        const blink = setInterval(() => {
+            if (this.targets.length === 0) {
+                clearInterval(blink);
+            }
             this.ctx.clearRect(0, 0, this.X, this.Y);
             this.targets.splice(0, 1);
+            this.render();
         }, modes[this.difficulty]);
-        this.render();
-    }
+    };
 
     handleClick(e) {
         const box = this.canvas.getBoundingClientRect();

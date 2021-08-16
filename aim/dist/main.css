@@ -67,6 +67,6 @@ body {
   pointer-events: none;
 }
 
-li {
+#game {
   background-image: url("../src//assets/wall.jpg");
 }

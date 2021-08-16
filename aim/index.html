@@ -19,23 +19,41 @@
             begin. Click on the circular objects as fast as possible,
             as accurately as possible.</p>
         <button class="start">Start</button>
-        
+        <form>
+            <label for="default">Default
+                <input type="radio" id="default" value="default">
+            </label>
+
+            <label for="easy">Easy
+                <input type="radio" id="easy" value="easy">
+            </label>
+
+            <label for="medium">Medium
+                <input type="radio" id="medium" value="medium">
+            </label>
+
+            <label for="hard">Hard
+                <input type="radio" id="hard" value="hard">
+            </label>
+        </form>
 
         <canvas id="canvas" width="1000" height="500"></canvas>
         <h4 class="timer"></h4>
         
         <ul class="scoreboard">
-            <li class="points"></li>
-            <li class="accuracy"></li>
-            <li class="score"></li>
+            <li class="points" id="game"></li>
+            <li class="accuracy" id="game"></li>
+            <li class="score" id="game"></li>
         </ul>
         
     </div>
 </body>
 
 <footer>
-    <a href=https://github.com/james625>Github</a>
-    <a href=#>LinkedIn</a>
+    <ul>Contact
+        <li><a href=https://github.com/james625>Github</a></li>
+        <li><a href=#>LinkedIn</a></li>
+    </ul>
 </footer>
 
 </html>
