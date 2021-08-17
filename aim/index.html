@@ -14,11 +14,18 @@
     
     <div class="container">
         <h3>Instructions:</h3>
-        <p> Select one of the game modes at the top 
-            or play the default game mode. Press start to
+        <p> Select one of the game modes. Press start to
             begin. Click on the circular objects as fast as possible,
             as accurately as possible. You must complete the game to
-            save your score as high score.
+            save your score as high score. Start a new game to see 
+            earned medals or cursors.
+            <br><br>
+            Medals Earned:
+            <br>
+            <img src="src/assets/bronze.png" alt="bronze" width="50" height="50" class="trophy" id="bronze">
+            <img src="src/assets/silver.png" alt="silver" width="50" height="50" class="trophy" id="silver">
+            <img src="src/assets/gold.png" alt="gold" width="50" height="50" class="trophy" id="gold1">
+            <img src="src/assets/gold.png" alt="gold" width="50" height="50" class="trophy" id="gold2">
         </p>
         <button class="start">Start</button>
         
@@ -53,6 +60,9 @@
         </ul>
 
         <form class="cursors">
+            <input type="radio" id="none" value="none" name="cursor">
+            <label for="crosshair"><img src="src/assets/standard.PNG" alt="default-cursor"></label>
+
             <input type="radio" id="crosshair" value="crosshair" name="cursor" disabled="true">
             <label for="crosshair">Crosshair: Get at least 1000 points</label>
 

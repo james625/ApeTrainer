@@ -125,6 +125,6 @@ label[for=hard] {
 .cursors {
   grid-column-start: 8;
   grid-column-end: 40;
-  grid-row-start: 41;
+  grid-row-start: 35;
   grid-row-end: auto;
 }

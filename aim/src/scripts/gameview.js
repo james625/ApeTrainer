@@ -72,6 +72,19 @@ class GameView {
         if (this.scores["hard"] >= 5) {
             document.getElementById("cursor3").removeAttribute("disabled");
         }
+
+        if (this.game.highscore >= 9000) {
+            document.getElementById("gold1").style.visibility = "visible";
+        }
+        if (this.scores["easy"] >= 70) {
+            document.getElementById("bronze").style.visibility = "visible";
+        }
+        if (this.scores["medium"] >= 25) {
+            document.getElementById("silver").style.visibility = "visible";
+        }
+        if (this.scores["hard"] >= 10) {
+            document.getElementById("gold2").style.visibility = "visible";
+        }
     };
 };
 
