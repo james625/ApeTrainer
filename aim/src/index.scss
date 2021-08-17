@@ -53,15 +53,23 @@ body {
 
 .timer {
     grid-column-start: 19;
-    grid-column-end: 24;
+    grid-column-end: 25;
     grid-row-start: 7;
     grid-row-end: auto;
 }
 
 .scoreboard {
     grid-column-start: 34;
-    grid-column-end: 39;
-    grid-row-start: 6;
+    grid-column-end: 40;
+    grid-row-start: 4;
+    grid-row-end: auto;
+    display: block;
+}
+
+.highs {
+    grid-column-start: 41;
+    grid-column-end: 47;
+    grid-row-start: 4;
     grid-row-end: auto;
     display: block;
 }
@@ -72,4 +80,46 @@ body {
 
 #game {
     background-image: url("../src//assets/wall.jpg");
+}
+
+.radios {
+    grid-column-start: 19;
+    grid-column-end: 35;
+    grid-row-start: 5;
+    grid-row-end: auto;
+}
+
+.radios input[type="radio"] {
+    opacity: 0;
+    width: 0;
+}
+
+.radios label {
+    display: inline-block;
+    padding: 10px 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+label[for="default"] {
+    border: solid 2px rgb(45, 151, 238);
+    background-color: rgb(116, 182, 236);
+}
+
+label[for="easy"] {
+    border: solid 2px green;
+    background-color: rgb(131, 236, 154);
+}
+
+label[for="medium"] {
+    border: solid 2px orange;
+    background-color: rgb(241, 196, 111);
+}
+
+label[for="hard"] {
+    border: solid 2px red;
+    background-color: rgb(241, 129, 129);
+}
+
+.radios input[type="radio"]:checked + label {
+    border: 3px solid;
 }

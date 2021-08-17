@@ -9,9 +9,11 @@ class GameView {
         this.color = color;
         this.radius = radius;
         this.thirty = new Thirty(this.canvas, this.ctx, this.radius, this.color, "easy");
-        // this.easy = new Thirty(canvas, ctx, radius, color, "easy");
-        // this.medium = new Thirty(canvas, ctx, radius, color, "medium");
-        // this.hard = new Thirty(canvas, ctx, radius, color, "hard");
+        this.scores = {
+            "easy": 0,
+            "medium": 0,
+            "hard": 0
+        }
     };
 
     start() {
@@ -40,10 +42,18 @@ class GameView {
             }
         });
         if (option === "default") {
+            if (this.thirty.points > this.scores[this.thirty.difficulty]) {
+                this.scores[this.thirty.difficulty] = this.thirty.points;
+                document.querySelector(`.${this.thirty.difficulty}`).innerText = `Best ${this.thirty.difficulty}: ${this.scores[this.thirty.difficulty]}`;
+            }
             this.thirty.stop();
             this.createGame();
         } else {
             this.game.stop();
+            if (this.thirty.points > this.scores[this.thirty.difficulty]) {
+                this.scores[this.thirty.difficulty] = this.thirty.points;
+                document.querySelector(`.${this.thirty.difficulty}`).innerText = `Best ${this.thirty.difficulty}: ${this.scores[this.thirty.difficulty]}`;
+            }
             this.thirty.stop();
             const newThirty = new Thirty(this.canvas, this.ctx, this.radius, this.color, option)
             this.thirty = newThirty

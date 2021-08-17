@@ -28,14 +28,14 @@ class Thirty extends Game {
             this.targets[0].draw(this.ctx);
         }
         const score = document.querySelector(".score");
-        score.innerText = `Final Score: ${this.points}`
+        score.innerText = `Final Score: ${this.points}`;
     }
 
     blinkCircle() {
         const modes = {
             "easy": 1000,
-            "medium": 500,
-            "hard": 250
+            "medium": 750,
+            "hard": 500
         };
         this.render();
         this.interval = setInterval(() => {

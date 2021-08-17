@@ -19,22 +19,19 @@
             begin. Click on the circular objects as fast as possible,
             as accurately as possible.</p>
         <button class="start">Start</button>
-        <form>
-            <label for="default">Default
-                <input type="radio" id="default" value="default" name="game-mode" checked>
-            </label>
+        <form class="radios">
+            
+            <input type="radio" id="default" value="default" name="game-mode" checked>
+            <label for="default">Default</label>
 
-            <label for="easy">Easy
-                <input type="radio" id="easy" value="easy" name="game-mode">
-            </label>
+            <input type="radio" id="easy" value="easy" name="game-mode">
+            <label for="easy">Easy</label>
 
-            <label for="medium">Medium
-                <input type="radio" id="medium" value="medium" name="game-mode">
-            </label>
+            <input type="radio" id="medium" value="medium" name="game-mode">
+            <label for="medium">Medium</label>
 
-            <label for="hard">Hard
-                <input type="radio" id="hard" value="hard" name="game-mode">
-            </label>
+            <input type="radio" id="hard" value="hard" name="game-mode">
+            <label for="hard">Hard</label>
         </form>
 
         <canvas id="canvas" width="1000" height="500"></canvas>
@@ -44,6 +41,13 @@
             <li class="points" id="game"></li>
             <li class="accuracy" id="game"></li>
             <li class="score" id="game"></li>
+        </ul>
+
+        <ul class="highs">
+            <li class="highscore" id="game"></li>
+            <li class="easy" id="game"></li>
+            <li class="medium" id="game"></li>
+            <li class="hard" id="game"></li>
         </ul>
         
     </div>

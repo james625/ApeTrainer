@@ -14,6 +14,7 @@ class Game {
         this.points = 0;
         this.target = new Target(this.randomPosition(), radius, color);
         this.handleClick = this.handleClick.bind(this);
+        this.highscore = 0;
     };
     
     randomPosition() {
@@ -41,6 +42,11 @@ class Game {
         this.clicks++;
         if (this.timer.maxTime <= 0) {
             this.canvas.classList.add("game-over");
+            let finalScore = (Math.floor((this.points / this.clicks) * 100) * this.points);
+            if (finalScore > this.highscore){
+                this.highscore = finalScore;
+            }
+            document.querySelector(".highscore").innerText = `High Score: ${this.highscore}`
         }
         if (this.target.clickedTarget(cursorX, cursorY)) {
             this.points ++;

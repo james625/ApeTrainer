@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // })
 
 
-    const newGame = new GameView(canvas, ctx, 25, "blue");
+    const newGame = new GameView(canvas, ctx, 25, "red");
     newGame.start();
 
 });
