@@ -14,7 +14,6 @@ class Game {
         this.points = 0;
         this.target = new Target(this.randomPosition(), radius, color);
         this.handleClick = this.handleClick.bind(this);
-        canvas.addEventListener('click', this.handleClick);
     };
     
     randomPosition() {
@@ -51,12 +50,24 @@ class Game {
     };
 
     start(time) {
-        this.canvas.classList.remove("game-over")
+        this.canvas.addEventListener('click', this.handleClick);
+        this.canvas.classList.remove("game-over");
         this.target = new Target(this.randomPosition(), this.radius, this.color);
         this.render();
         this.timer.reset();
         this.timer.start(time);
     };
+
+    stop() {
+        this.canvas.removeEventListener('click', this.handleClick);
+        this.canvas.classList.remove("game-over");
+        this.timer.reset();
+        this.ctx.clearRect(0, 0, this.X, this.Y);
+        document.querySelector(".points").innerText = "";
+        document.querySelector(".accuracy").innerText = "";
+        document.querySelector(".score").innerText = "";
+        document.querySelector(".timer").innerText = "";
+    }
 
 };
 

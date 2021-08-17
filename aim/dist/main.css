@@ -7,6 +7,7 @@ ul {
 
 canvas {
   border: 5px solid yellow;
+  background-image: url("../src/assets/background.png");
   grid-column-start: 8;
   grid-column-end: auto;
   grid-row-start: 10;
@@ -51,14 +52,14 @@ body {
 .timer {
   grid-column-start: 19;
   grid-column-end: 24;
-  grid-row-start: 10;
+  grid-row-start: 7;
   grid-row-end: auto;
 }
 
 .scoreboard {
   grid-column-start: 34;
   grid-column-end: 39;
-  grid-row-start: 10;
+  grid-row-start: 6;
   grid-row-end: auto;
   display: block;
 }
