@@ -10,7 +10,7 @@ class Target {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, 2*Math.PI, true);
         const gradient = ctx.createRadialGradient(
-            this.x + 5, this.y + 5, this.radius / 100, this.x + 10, this.y + 10, 100
+            this.x + 5, this.y + 5, this.radius / 100, this.x, this.y, 100
         );
         gradient.addColorStop(1, this.color);
         gradient.addColorStop(0, "#d3d3d3");

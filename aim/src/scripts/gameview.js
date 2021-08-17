@@ -59,6 +59,19 @@ class GameView {
             this.thirty = newThirty
             this.createThirty(this.thirty);
         }
+
+        if (this.game.highscore >= 1000) {
+            document.getElementById("crosshair").removeAttribute("disabled");
+        }
+        if (this.scores["easy"] >= 20) {
+            document.getElementById("cursor1").removeAttribute("disabled");
+        }
+        if (this.scores["medium"] >= 15) {
+            document.getElementById("cursor2").removeAttribute("disabled");
+        }
+        if (this.scores["hard"] >= 5) {
+            document.getElementById("cursor3").removeAttribute("disabled");
+        }
     };
 };
 

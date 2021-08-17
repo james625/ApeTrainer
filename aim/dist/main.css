@@ -121,3 +121,10 @@ label[for=hard] {
 .radios input[type=radio]:checked + label {
   border: 3px solid;
 }
+
+.cursors {
+  grid-column-start: 8;
+  grid-column-end: 40;
+  grid-row-start: 41;
+  grid-row-end: auto;
+}

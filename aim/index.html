@@ -17,10 +17,12 @@
         <p> Select one of the game modes at the top 
             or play the default game mode. Press start to
             begin. Click on the circular objects as fast as possible,
-            as accurately as possible.</p>
+            as accurately as possible. You must complete the game to
+            save your score as high score.
+        </p>
         <button class="start">Start</button>
+        
         <form class="radios">
-            
             <input type="radio" id="default" value="default" name="game-mode" checked>
             <label for="default">Default</label>
 
@@ -49,6 +51,20 @@
             <li class="medium" id="game"></li>
             <li class="hard" id="game"></li>
         </ul>
+
+        <form class="cursors">
+            <input type="radio" id="crosshair" value="crosshair" name="cursor" disabled="true">
+            <label for="crosshair">Crosshair: Get at least 1000 points</label>
+
+            <input type="radio" id="cursor1" value="cursor1" name="cursor" disabled="true">
+            <label for="cursor1">Cursor1: Get 20 points in Easy</label>
+
+            <input type="radio" id="cursor2" value="cursor2" name="cursor" disabled="true">
+            <label for="cursor2">Cursor2: Get 15 points in Medium</label>
+
+            <input type="radio" id="cursor3" value="cursor3" name="cursor" disabled="true">
+            <label for="cursor3">Cursor3: Get 5 points in Hard</label>
+        </form>
         
     </div>
 </body>
@@ -56,7 +72,7 @@
 <footer>
     <ul>About
         <li><a href=https://github.com/james625>Github</a></li>
-        <li><a href=#>LinkedIn</a></li>
+        <li><a href=https://www.linkedin.com/in/jameschen625>LinkedIn</a></li>
     </ul>
 </footer>
 

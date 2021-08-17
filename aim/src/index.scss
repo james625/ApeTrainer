@@ -5,8 +5,7 @@ ul {
 canvas {
     border: 5px solid yellow;
     background-image: url('../src/assets/background.png');
-    // background-position: bottom;
-    // cursor: crosshair;
+    // cursor: url("../src/assets/1mo36.png"), auto;
     grid-column-start: 8;
     grid-column-end: auto;
     grid-row-start: 10;
@@ -17,8 +16,6 @@ canvas {
     display: grid;
     grid-template-columns: repeat(50, 2%);
     grid-template-rows: repeat(50, 2%);
-    // margin-top: 10%;
-    // border: 5px solid red;
 }
 
 p {
@@ -122,4 +119,11 @@ label[for="hard"] {
 
 .radios input[type="radio"]:checked + label {
     border: 3px solid;
+}
+
+.cursors {
+    grid-column-start: 8;
+    grid-column-end: 40;
+    grid-row-start: 41;
+    grid-row-end: auto;
 }
