@@ -2,11 +2,17 @@ ul {
     list-style: none;
 }
 
+li {
+    display: block;
+    text-align: left;
+    list-style-position: outside;
+}
+
 canvas {
     border: 5px solid yellow;
     background-image: url('../src/assets/background.png');
     cursor: auto;
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: auto;
     grid-row-start: 5;
     grid-row-end: auto;
@@ -14,7 +20,7 @@ canvas {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1000px 2fr 1fr;
+    grid-template-columns: 1fr 2fr 30px 1000px 30px 2fr 1fr;
     grid-template-rows: 75px 75px 25px 10px 50px 450px 50px 100px;
 }
 
@@ -35,7 +41,7 @@ h3 {
 }
 
 .start {
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: auto;
     grid-row-start: 3;
     grid-row-end: auto;
@@ -51,7 +57,7 @@ body {
 }
 
 .timer {
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: auto;
     grid-row-start: 3;
     grid-row-end: auto;
@@ -60,33 +66,40 @@ body {
 }
 
 .scoreboard {
-    grid-column-start: 3;
-    grid-column-end: auto;
-    grid-row-start: 2;
-    grid-row-end: auto;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
     display: block;
     justify-self: right;
 }
 
 .highs {
     grid-column-start: 2;
-    grid-column-end: auto;
+    grid-column-end: 4;
     grid-row-start: 6;
     grid-row-end: auto;
     display: block;
-    align-self: center;
+    align-self: end;
+    justify-self: center;
 }
 
 .game-over {
     pointer-events: none;
 }
 
-#game {
-    background-image: url("../src//assets/postit.png");
+.scoreboard, .highs {
+    background-image: url("../src/assets/postit.png");
+    background-position: center top;
+    background-size: 100% 100%;
+    background-size: cover;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: cursive;
 }
 
 .radios {
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: auto;
     grid-row-start: 2;
     grid-row-end: auto;
@@ -133,8 +146,8 @@ label[for="hard"] {
 }
 
 .cursors {
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
     grid-row-start: 8;
     grid-row-end: auto;
 }
@@ -151,4 +164,12 @@ label[for="hard"] {
 
 #label-none {
     opacity: 1;
+}
+
+footer {
+    text-align: center;
+}
+
+.highs {
+    
 }
