@@ -62,15 +62,23 @@ class GameView {
 
         if (this.game.highscore >= 1000) {
             document.getElementById("crosshair").removeAttribute("disabled");
+            document.getElementById("label-ch").innerHTML = '<img src="src/assets/crosshair.png" alt="crosshair">';
+            document.getElementById("label-ch").style.opacity = 1;
         }
         if (this.scores["easy"] >= 20) {
             document.getElementById("cursor1").removeAttribute("disabled");
+            document.getElementById("label-easy").innerHTML = '<img src="src/assets/easy.png" alt="green-ch">';
+            document.getElementById("label-easy").style.opacity = 1;
         }
         if (this.scores["medium"] >= 15) {
             document.getElementById("cursor2").removeAttribute("disabled");
+            document.getElementById("label-medium").innerHTML = '<img src="src/assets/medium.png" alt="orange-ch">';
+            document.getElementById("label-medium").style.opacity = 1;
         }
         if (this.scores["hard"] >= 5) {
             document.getElementById("cursor3").removeAttribute("disabled");
+            document.getElementById("label-hard").innerHTML = '<img src="src/assets/hard.png" alt="red-ch">';
+            document.getElementById("label-hard").style.opacity = 1;
         }
 
         if (this.game.highscore >= 9000) {
@@ -84,6 +92,24 @@ class GameView {
         }
         if (this.scores["hard"] >= 10) {
             document.getElementById("gold2").style.visibility = "visible";
+        }
+        const cursor = document.querySelectorAll('input[name="cursor"]');
+        let select;
+        cursor.forEach ( ele => { 
+            if (ele.checked) {
+                select = ele.value;
+            }
+        });
+        if (select === "none") {
+            this.canvas.style.cursor = "auto";
+        } else if (select === "crosshair") {
+            this.canvas.style.cursor = 'url("src/assets/crosshair.png"), auto';
+        } else if (select === "cursor1") {
+            this.canvas.style.cursor = 'url("src/assets/easy.png"), auto';
+        } else if (select === "cursor2") {
+            this.canvas.style.cursor = 'url("src/assets/medium.png"), auto';
+        } else if (select === "cursor3") {
+            this.canvas.style.cursor = 'url("src/assets/hard.png"), auto';
         }
     };
 };

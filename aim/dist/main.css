@@ -8,42 +8,45 @@ ul {
 canvas {
   border: 5px solid yellow;
   background-image: url("../src/assets/background.png");
-  grid-column-start: 8;
+  cursor: auto;
+  grid-column-start: 3;
   grid-column-end: auto;
-  grid-row-start: 10;
+  grid-row-start: 5;
   grid-row-end: auto;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(50, 2%);
-  grid-template-rows: repeat(50, 2%);
+  grid-template-columns: 1fr 2fr 1000px 2fr 1fr;
+  grid-template-rows: 75px 75px 25px 10px 50px 450px 50px 100px;
 }
 
 p {
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 12;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
   grid-row-end: auto;
+  font-family: sans-serif, Arial, serif;
 }
 
 h3 {
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 10;
+  grid-column-start: 2;
+  grid-column-end: auto;
+  grid-row-start: 5;
   grid-row-end: auto;
+  font-family: sans-serif, Arial, serif;
 }
 
 .start {
-  grid-column-start: 8;
+  grid-column-start: 3;
   grid-column-end: auto;
-  grid-row-start: 8;
+  grid-row-start: 3;
   grid-row-end: auto;
   background-color: #90EE90;
   border-color: green;
   text-align: center;
-  margin: auto;
   border-radius: 8px;
+  justify-self: left;
 }
 
 body {
@@ -51,26 +54,30 @@ body {
 }
 
 .timer {
-  grid-column-start: 19;
-  grid-column-end: 25;
-  grid-row-start: 7;
+  grid-column-start: 3;
+  grid-column-end: auto;
+  grid-row-start: 3;
   grid-row-end: auto;
+  justify-self: center;
+  align-self: center;
 }
 
 .scoreboard {
-  grid-column-start: 34;
-  grid-column-end: 40;
-  grid-row-start: 4;
+  grid-column-start: 3;
+  grid-column-end: auto;
+  grid-row-start: 2;
   grid-row-end: auto;
   display: block;
+  justify-self: right;
 }
 
 .highs {
-  grid-column-start: 41;
-  grid-column-end: 47;
-  grid-row-start: 4;
+  grid-column-start: 2;
+  grid-column-end: auto;
+  grid-row-start: 6;
   grid-row-end: auto;
   display: block;
+  align-self: center;
 }
 
 .game-over {
@@ -78,22 +85,23 @@ body {
 }
 
 #game {
-  background-image: url("../src//assets/wall.jpg");
+  background-image: url("../src//assets/postit.png");
 }
 
 .radios {
-  grid-column-start: 19;
-  grid-column-end: 35;
-  grid-row-start: 5;
+  grid-column-start: 3;
+  grid-column-end: auto;
+  grid-row-start: 2;
   grid-row-end: auto;
+  justify-self: center;
 }
 
-.radios input[type=radio] {
+.radios input[type=radio], .cursors input[type=radio] {
   opacity: 0;
   width: 0;
 }
 
-.radios label {
+.radios label, .cursors label {
   display: inline-block;
   padding: 10px 10px;
   font-family: Helvetica, sans-serif;
@@ -123,13 +131,27 @@ label[for=hard] {
   border-radius: 8px;
 }
 
-.radios input[type=radio]:checked + label {
+.radios input[type=radio]:checked + label, .cursors input[type=radio]:checked + label {
   border: 3px solid;
 }
 
 .cursors {
-  grid-column-start: 8;
-  grid-column-end: 40;
-  grid-row-start: 35;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 8;
   grid-row-end: auto;
+}
+
+#bronze, #silver, #gold1, #gold2 {
+  visibility: hidden;
+}
+
+.cursors label {
+  border: solid 2px yellow;
+  border-radius: 8px;
+  opacity: 0.5;
+}
+
+#label-none {
+  opacity: 1;
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="src/assets/1mo36.png" type="image" sizes="16x16">
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Ape Trainer</title>
@@ -14,11 +15,10 @@
     
     <div class="container">
         <h3>Instructions:</h3>
-        <p> Select one of the game modes. Press start to
-            begin. Click on the circular objects as fast as possible,
-            as accurately as possible. You must complete the game to
-            save your score as high score. Start a new game to see 
-            earned medals or cursors.
+        <p> 
+            Press start to begin.<br><br>
+            Click on the circles to gain points.<br><br>
+            Start a new game to see earned medals or cursors.
             <br><br>
             Medals Earned:
             <br>
@@ -60,20 +60,20 @@
         </ul>
 
         <form class="cursors">
-            <input type="radio" id="none" value="none" name="cursor">
-            <label for="crosshair"><img src="src/assets/standard.PNG" alt="default-cursor"></label>
+            <input type="radio" id="none" value="none" name="cursor" checked>
+            <label for="none" id="label-none"><img src="src/assets/standard.PNG" alt="default-cursor"></label>
 
             <input type="radio" id="crosshair" value="crosshair" name="cursor" disabled="true">
-            <label for="crosshair">Crosshair: Get at least 1000 points</label>
+            <label for="crosshair" id="label-ch"><img src="src/assets/crosshair.png" alt="crosshair"> Get at least 1000 points</label>
 
             <input type="radio" id="cursor1" value="cursor1" name="cursor" disabled="true">
-            <label for="cursor1">Cursor1: Get 20 points in Easy</label>
+            <label for="cursor1" id="label-easy"><img src="src/assets/easy.png" alt="green-ch"> Get 20 points in Easy</label>
 
             <input type="radio" id="cursor2" value="cursor2" name="cursor" disabled="true">
-            <label for="cursor2">Cursor2: Get 15 points in Medium</label>
+            <label for="cursor2" id="label-medium"><img src="src/assets/medium.png" alt="orange-ch"> Get 15 points in Medium</label>
 
             <input type="radio" id="cursor3" value="cursor3" name="cursor" disabled="true">
-            <label for="cursor3">Cursor3: Get 5 points in Hard</label>
+            <label for="cursor3" id="label-hard"><img src="src/assets/hard.png" alt="red-ch"> Get 5 points in Hard</label>
         </form>
         
     </div>
@@ -82,7 +82,6 @@
 <footer>
     <ul>About
         <li><a href=https://github.com/james625>Github</a></li>
-        <li><a href=https://www.linkedin.com/in/jameschen625>LinkedIn</a></li>
     </ul>
 </footer>
 
