@@ -39,20 +39,20 @@ class Game {
         const box = this.canvas.getBoundingClientRect();
         const cursorX = e.clientX - box.left;
         const cursorY = e.clientY - box.top;
-        this.clicks++;
         if (this.timer.maxTime <= 0) {
             this.canvas.classList.add("game-over");
-            let finalScore = (Math.floor((this.points / this.clicks) * 100) * this.points);
-            if (finalScore > this.highscore){
-                this.highscore = finalScore;
-            }
-            document.querySelector(".highscore").innerText = `High Score: ${this.highscore}`
         }
+        this.clicks++;
         if (this.target.clickedTarget(cursorX, cursorY)) {
             this.points ++;
             this.target = new Target(this.randomPosition(), this.radius, this.color);
             this.render();
         }
+        let finalScore = (Math.floor((this.points / this.clicks) * 100) * this.points);
+        if (finalScore > this.highscore){
+            this.highscore = finalScore;
+        }
+        document.querySelector(".highscore").innerText = `High Score: ${this.highscore}`;
     };
 
     start(time) {

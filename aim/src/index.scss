@@ -41,7 +41,7 @@ h3 {
     border-color: green;
     text-align: center;
     margin: auto;
-
+    border-radius: 8px;
 }
 
 body {
@@ -100,21 +100,25 @@ body {
 label[for="default"] {
     border: solid 2px rgb(45, 151, 238);
     background-color: rgb(116, 182, 236);
+    border-radius: 8px;
 }
 
 label[for="easy"] {
     border: solid 2px green;
     background-color: rgb(131, 236, 154);
+    border-radius: 8px;
 }
 
 label[for="medium"] {
     border: solid 2px orange;
     background-color: rgb(241, 196, 111);
+    border-radius: 8px;
 }
 
 label[for="hard"] {
     border: solid 2px red;
     background-color: rgb(241, 129, 129);
+    border-radius: 8px;
 }
 
 .radios input[type="radio"]:checked + label {

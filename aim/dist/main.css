@@ -43,6 +43,7 @@ h3 {
   border-color: green;
   text-align: center;
   margin: auto;
+  border-radius: 8px;
 }
 
 body {
@@ -101,21 +102,25 @@ body {
 label[for=default] {
   border: solid 2px #2d97ee;
   background-color: #74b6ec;
+  border-radius: 8px;
 }
 
 label[for=easy] {
   border: solid 2px green;
   background-color: #83ec9a;
+  border-radius: 8px;
 }
 
 label[for=medium] {
   border: solid 2px orange;
   background-color: #f1c46f;
+  border-radius: 8px;
 }
 
 label[for=hard] {
   border: solid 2px red;
   background-color: #f18181;
+  border-radius: 8px;
 }
 
 .radios input[type=radio]:checked + label {
