@@ -16,6 +16,7 @@ canvas {
     grid-column-end: auto;
     grid-row-start: 5;
     grid-row-end: auto;
+    border-radius: 8px;
 }
 
 .container {
@@ -168,4 +169,8 @@ label[for="hard"] {
 
 footer {
     text-align: center;
+}
+
+#label-none img {
+    height: 32px;
 }
