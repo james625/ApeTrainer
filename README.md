@@ -4,7 +4,7 @@ disappears. It is similar to whack-a-mole, but it can also serve as a way
 to practice hand-eye coordination on the screen with the cursor. There are 
 different settings to help ramp up the difficulty.
 
-## Live Site [ApeTrainer](https://james625.github.io/ApeTrainer/)
+## Live Site - [ApeTrainer](https://james625.github.io/ApeTrainer/)
 
 ## Functionality & MVPs
 In this aim trainer, users will be able to:
