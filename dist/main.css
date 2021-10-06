@@ -173,14 +173,16 @@ label[for=hard] {
 footer {
   text-align: center;
 }
-footer i {
-  font-size: 50px;
-  color: black;
-}
-footer a {
-  text-decoration: none;
-}
 
 #label-none img {
   height: 32px;
+}
+
+i {
+  font-size: 50px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
 }
