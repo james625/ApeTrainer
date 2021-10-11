@@ -5,6 +5,7 @@ to practice hand-eye coordination on the screen with the cursor. There are
 different settings to help ramp up the difficulty.
 
 ## Live Site - [ApeTrainer](https://james625.github.io/ApeTrainer/)
+![alt text](https://github.com/james625/ApeTrainer/blob/main/src/assets/sample.PNG "Sample")
 
 ## Functionality & MVPs
 In this aim trainer, users will be able to:
