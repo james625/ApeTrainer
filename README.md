@@ -26,8 +26,7 @@ In addition, this project will include:
 ![wireframe](./wireframe.png)
 
 ## Technologies
-This project will be created using canvas and vanilla js. Three.js will also 
-be considered to potentially make three dimensional objects.
+This project will be created using canvas and vanilla JavaScript.
 
 ## Implementation Timeline
 * Friday afternoon & Weekend\
