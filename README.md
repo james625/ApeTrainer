@@ -28,6 +28,37 @@ In addition, this project will include:
 ## Technologies
 This project will be created using canvas and vanilla JavaScript.
 
+## Code
+One particular part of the project that I thought was distinctive was when I created new game modes that were not timed like the default. Since they had the same functionality where 30 orbs would spawn, I was able to make it a single class and only adjust how often they spawn. I was able to do this using an input value coupled with an object that matched the difficulty to a certain time interval.
+
+```js
+const radio = document.querySelectorAll('input[name="game-mode"]');
+        let option;
+        radio.forEach ( ele => { 
+            if (ele.checked) {
+                option = ele.value;
+            }
+        });
+        if (option === "default") {
+            if (this.thirty.points > this.scores[this.thirty.difficulty]) {
+                this.scores[this.thirty.difficulty] = this.thirty.points;
+                document.querySelector(`.${this.thirty.difficulty}`).innerText = `Best ${this.thirty.difficulty}: ${this.scores[this.thirty.difficulty]}`;
+            }
+            this.thirty.stop();
+            this.createGame();
+        } else {
+            this.game.stop();
+            if (this.thirty.points > this.scores[this.thirty.difficulty]) {
+                this.scores[this.thirty.difficulty] = this.thirty.points;
+                document.querySelector(`.${this.thirty.difficulty}`).innerText = `Best ${this.thirty.difficulty}: ${this.scores[this.thirty.difficulty]}`;
+            }
+            this.thirty.stop();
+            const newThirty = new Thirty(this.canvas, this.ctx, this.radius, this.color, option)
+            this.thirty = newThirty
+            this.createThirty(this.thirty);
+        }
+```
+
 ## Implementation Timeline
 * Friday afternoon & Weekend\
     Set up canvas and implement a basic version where circles appear on the
